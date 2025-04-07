@@ -46,7 +46,7 @@ function App() {
             <Route path="/users" element={<Users />} />
             <Route path="/workouts" element={<Workouts />} />
             <Route path="/" element={
-              <div className="jumbotron text-center">
+              <div className="bg-light p-5 rounded text-center">
                 <h1 className="display-4">Welcome to OctoFit Tracker</h1>
                 <p className="lead">Track your fitness journey with Mergington High School's fitness app!</p>
               </div>
