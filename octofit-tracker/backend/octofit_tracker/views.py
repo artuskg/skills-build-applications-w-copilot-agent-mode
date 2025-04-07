@@ -4,6 +4,11 @@ from rest_framework.response import Response
 from rest_framework.reverse import reverse
 from rest_framework.parsers import JSONParser
 from rest_framework.renderers import JSONRenderer, BrowsableAPIRenderer
+
+# Configure default suffix for API endpoints
+from rest_framework.routers import DefaultRouter
+DefaultRouter.trailing_slash = False
+
 from .models import User, Team, Activity, Leaderboard, Workout
 from .serializers import (
     UserSerializer, TeamSerializer, ActivitySerializer,
