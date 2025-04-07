@@ -80,7 +80,7 @@ jobs:
            }'
 
           # Check for codespace Django REST API endpoint suffix in Activities.js
-          file="octofit-tracker/frontend/src/components/Activities.js"
+          file="monafit-tracker/frontend/src/components/Activities.js"
           keyphrase='\-8000.app.github.dev\/api\/activities\/'
           minimum_occurences=1
           found_occurences=$(grep -o "$keyphrase" "$file" | wc -l)
@@ -90,7 +90,7 @@ jobs:
           fi
 
           # Check for codespace Django REST API endpoint suffix in Leaderboard.js
-          file="octofit-tracker/frontend/src/components/Leaderboard.js"
+          file="monafit-tracker/frontend/src/components/Leaderboard.js"
           keyphrase='\-8000.app.github.dev\/api\/leaderboard\/'
           minimum_occurences=1
           found_occurences=$(grep -o "$keyphrase" "$file" | wc -l)
@@ -100,7 +100,7 @@ jobs:
           fi
 
           # Check for codespace Django REST API endpoint suffix in Teams.js
-          file="octofit-tracker/frontend/src/components/Teams.js"
+          file="monafit-tracker/frontend/src/components/Teams.js"
           keyphrase='\-8000.app.github.dev\/api\/teams\/'
           minimum_occurences=1
           found_occurences=$(grep -o "$keyphrase" "$file" | wc -l)
@@ -110,7 +110,7 @@ jobs:
           fi
 
           # Check for codespace Django REST API endpoint suffix in Users.js
-          file="octofit-tracker/frontend/src/components/Users.js"
+          file="monafit-tracker/frontend/src/components/Users.js"
           keyphrase='\-8000.app.github.dev\/api\/users\/'
           minimum_occurences=1
           found_occurences=$(grep -o "$keyphrase" "$file" | wc -l)
@@ -120,7 +120,7 @@ jobs:
           fi
 
           # Check for codespace Django REST API endpoint suffix in Workouts.js
-          file="octofit-tracker/frontend/src/components/Workouts.js"
+          file="monafit-tracker/frontend/src/components/Workouts.js"
           keyphrase='\-8000.app.github.dev\/api\/workouts\/'
           minimum_occurences=1
           found_occurences=$(grep -o "$keyphrase" "$file" | wc -l)
