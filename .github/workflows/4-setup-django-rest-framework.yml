@@ -5,7 +5,7 @@ on:
     branches:
       - "build-octofit-app"
     paths:
-      - "octofit-tracker/backend/octofit_tracker/**"
+      - "monafit-tracker/backend/octofit_tracker/**"
 
 permissions:
   contents: read
@@ -65,7 +65,7 @@ jobs:
             }'
 
           # Check for codespace Django REST API endpoint suffix in settings.py
-          file="octofit-tracker/backend/octofit_tracker/settings.py"
+          file="monafit-tracker/backend/octofit_tracker/settings.py"
           keyphrase='\-8000.app.github.dev'
           minimum_occurences=1
           found_occurences=$(grep -o "$keyphrase" "$file" | wc -l)
@@ -75,7 +75,7 @@ jobs:
           fi
 
           # Check for codespace Django REST API endpoint suffix in views.py
-          file="octofit-tracker/backend/octofit_tracker/views.py"
+          file="monafit-tracker/backend/octofit_tracker/views.py"
           keyphrase='\-8000.app.github.dev'
           minimum_occurences=1
           found_occurences=$(grep -o "$keyphrase" "$file" | wc -l)
