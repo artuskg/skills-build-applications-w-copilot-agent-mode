@@ -4,7 +4,7 @@ function Users() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch('https://${process.env.CODESPACE_NAME}-8000.app.github.dev/api/users/')
+    fetch('https://codespaces-8000.app.github.dev/api/users/')
       .then(response => response.json())
       .then(data => setUsers(data))
       .catch(error => console.error('Error fetching users:', error));
