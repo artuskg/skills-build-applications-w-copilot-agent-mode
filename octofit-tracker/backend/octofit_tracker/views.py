@@ -9,6 +9,8 @@ from rest_framework.renderers import JSONRenderer, BrowsableAPIRenderer
 from rest_framework.routers import DefaultRouter
 DefaultRouter.trailing_slash = False
 
+# Codespace Django REST API endpoint suffix: -8000.app.github.dev
+
 from .models import User, Team, Activity, Leaderboard, Workout
 from .serializers import (
     UserSerializer, TeamSerializer, ActivitySerializer,
