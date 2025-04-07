@@ -5,23 +5,23 @@
       "name": "Launch Django Backend",
       "type": "python",
       "request": "launch",
-      "program": "${workspaceFolder}/octofit-tracker/backend/manage.py",
+      "program": "${workspaceFolder}/monafit-tracker/backend/manage.py",
       "args": ["runserver", "0.0.0.0:8000"],
       "django": true,
       "justMyCode": true,
-      "python": "${workspaceFolder}/octofit-tracker/backend/venv/bin/python",
+      "python": "${workspaceFolder}/monafit-tracker/backend/venv/bin/python",
       "env": {
-        "PYTHONPATH": "${workspaceFolder}/octofit-tracker/backend/venv/bin/python",
-        "VIRTUAL_ENV": "${workspaceFolder}/octofit-tracker/backend/venv",
-        "PATH": "${workspaceFolder}/octofit-tracker/backend/venv/bin:${env:PATH}"
+        "PYTHONPATH": "${workspaceFolder}/monafit-tracker/backend/venv/bin/python",
+        "VIRTUAL_ENV": "${workspaceFolder}/monafit-tracker/backend/venv",
+        "PATH": "${workspaceFolder}/monafit-tracker/backend/venv/bin:${env:PATH}"
       }
     },
     {
       "name": "Launch React Frontend",
       "type": "node",
       "request": "launch",
-      "program": "${workspaceFolder}/octofit-tracker/frontend/node_modules/react-scripts/scripts/start.js",
-      "cwd": "${workspaceFolder}/octofit-tracker/frontend",
+      "program": "${workspaceFolder}/monafit-tracker/frontend/node_modules/react-scripts/scripts/start.js",
+      "cwd": "${workspaceFolder}/monafit-tracker/frontend",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["start"],
       "port": 3000

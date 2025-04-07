@@ -1,0 +1,214 @@
+/* General styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Navigation styles */
+nav {
+  background-color: #4682b4; /* Steel blue */
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: #ffffff; /* White text for visibility */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #f0f8ff; /* Light blue */
+  text-decoration: underline;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #4682b4;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-logo {
+  height: 40px;
+  margin-right: 1rem;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #e0f0ff;
+}
+
+/* Component styles */
+h1, .display-4 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.lead {
+  color: #495057;
+}
+
+/* Table styles */
+table {
+  width: 90%;
+  margin: 1rem auto;
+  border-collapse: collapse;
+  background-color: #ffffff; /* White background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: left;
+  font-size: 1rem;
+}
+
+table th {
+  background-color: #4682b4; /* Steel blue */
+  color: white;
+  font-size: 1.2rem;
+}
+
+table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+table tr:hover {
+  background-color: #e9ecef;
+}
+
+.table {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin-top: 2rem;
+}
+
+.table thead th {
+  background-color: #4682b4;
+  color: white;
+  border-bottom: none;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.table tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+/* Button styles */
+button {
+  background-color: #4682b4; /* Steel blue */
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #5a9bd4; /* Lighter steel blue */
+}
+
+.btn-primary {
+  background-color: #4682b4;
+  border-color: #4682b4;
+}
+
+.btn-primary:hover {
+  background-color: #3a6d96;
+  border-color: #3a6d96;
+}
+
+/* Logo styles */
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 50px;
+}
+
+/* Favicon styles */
+.favicon {
+  display: none; /* Favicon is handled by the browser */
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Jumbotron */
+.jumbotron {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  padding: 2rem;
+  margin-top: 2rem;
+}
