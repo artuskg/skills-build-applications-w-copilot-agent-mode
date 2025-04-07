@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Leaderboard() {
-  const leaderboard = [
-    { id: 1, username: 'thundergod', score: 100 },
-    { id: 2, username: 'metalgeek', score: 90 },
-    { id: 3, username: 'zerocool', score: 95 },
-  ];
+  const [leaderboard, setLeaderboard] = useState([]);
+
+  useEffect(() => {
+    fetch('https://${process.env.CODESPACE_NAME}-8000.app.github.dev/api/leaderboard/')
+      .then(response => response.json())
+      .then(data => setLeaderboard(data))
+      .catch(error => console.error('Error fetching leaderboard:', error));
+  }, []);
 
   return (
     <div>

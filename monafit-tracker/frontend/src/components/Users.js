@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Users() {
-  const users = [
-    { id: 1, username: 'thundergod', email: 'thundergod@mhigh.edu' },
-    { id: 2, username: 'metalgeek', email: 'metalgeek@mhigh.edu' },
-    { id: 3, username: 'zerocool', email: 'zerocool@mhigh.edu' },
-  ];
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    fetch('https://${process.env.CODESPACE_NAME}-8000.app.github.dev/api/users/')
+      .then(response => response.json())
+      .then(data => setUsers(data))
+      .catch(error => console.error('Error fetching users:', error));
+  }, []);
 
   return (
     <div>

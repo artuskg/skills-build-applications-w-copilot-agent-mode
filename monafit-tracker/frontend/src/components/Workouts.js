@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Workouts() {
-  const workouts = [
-    { id: 1, name: 'Cycling Training', description: 'Training for a road cycling event' },
-    { id: 2, name: 'Crossfit', description: 'Training for a crossfit competition' },
-    { id: 3, name: 'Running Training', description: 'Training for a marathon' },
-  ];
+  const [workouts, setWorkouts] = useState([]);
+
+  useEffect(() => {
+    fetch('https://${process.env.CODESPACE_NAME}-8000.app.github.dev/api/workouts/')
+      .then(response => response.json())
+      .then(data => setWorkouts(data))
+      .catch(error => console.error('Error fetching workouts:', error));
+  }, []);
 
   return (
     <div>

@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Teams() {
-  const teams = [
-    { id: 1, name: 'Blue Team', members: 5 },
-    { id: 2, name: 'Gold Team', members: 4 },
-    { id: 3, name: 'Red Team', members: 6 },
-  ];
+  const [teams, setTeams] = useState([]);
+
+  useEffect(() => {
+    fetch('https://${process.env.CODESPACE_NAME}-8000.app.github.dev/api/teams/')
+      .then(response => response.json())
+      .then(data => setTeams(data))
+      .catch(error => console.error('Error fetching teams:', error));
+  }, []);
 
   return (
     <div>
