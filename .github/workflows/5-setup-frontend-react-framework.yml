@@ -5,7 +5,7 @@ on:
     branches:
       - "build-octofit-app"
     paths:
-      - "octofit-tracker/frontend/**"
+      - "monafit-tracker/frontend/**"
 
 permissions:
   contents: read
